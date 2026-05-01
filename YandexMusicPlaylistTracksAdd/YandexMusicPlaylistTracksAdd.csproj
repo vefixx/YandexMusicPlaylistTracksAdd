@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="KM.Yandex.Music.Api" Version="2.0.6" />
+      <PackageReference Include="KM.Yandex.Music.Client" Version="2.0.6" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.5-beta1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="C:\Users\verew\.nuget\packages\km.yandex.music.api\2.0.6\contentFiles\any\net8.0\README.md" />
+      <Content Remove="C:\Users\verew\.nuget\packages\km.yandex.music.client\2.0.6\contentFiles\any\net8.0\README.md" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="config.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="tracks.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="playlists.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>
